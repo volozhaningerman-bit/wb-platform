@@ -1,9 +1,10 @@
 export class WorkspaceService {
 
- create(name:string){
+ create(userId:string,name:string){
   return {
-   id:crypto.randomUUID(),
-   name
+   owner:userId,
+   name,
+   created:true
   };
  }
 }

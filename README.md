@@ -1,12 +1,13 @@
-# WB Platform MVP v1.6 Working App
+# WB Platform MVP v1.7 First Deploy Candidate
 
-Transition from architecture to working application layer.
+Goal:
+First deployable version.
 
-Included:
-- NestJS API foundation
-- Next.js application foundation
-- authentication flow
-- workspace flow
-- WB connection flow
-- dashboard data layer
-- Railway preparation
+Includes:
+- NestJS runtime
+- Next.js dashboard shell
+- Prisma runtime preparation
+- Railway deployment files
+- health checks
+- authentication foundation
+- workspace foundation

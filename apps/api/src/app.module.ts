@@ -1,9 +1,8 @@
-import { AuthModule } from './modules/auth/auth.module';
-import { WorkspaceModule } from './modules/workspace/workspace.module';
+import { Module } from '@nestjs/common';
 
-export class AppModule {
-  modules = [
-    AuthModule,
-    WorkspaceModule
-  ];
-}
+@Module({
+ imports:[],
+ controllers:[],
+ providers:[]
+})
+export class AppModule {}
