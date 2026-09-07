@@ -1,8 +1,12 @@
 {
-  "name": "wb-platform-web",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build"
-  }
+ "name":"web",
+ "scripts":{
+  "dev":"next dev",
+  "build":"next build"
+ },
+ "dependencies":{
+  "next":"latest",
+  "react":"latest",
+  "react-dom":"latest"
+ }
 }

@@ -1,7 +1,10 @@
 {
-  "name": "wb-platform-api",
-  "private": true,
-  "scripts": {
-    "start": "nest start"
-  }
+ "name":"api",
+ "scripts":{
+  "start":"nest start"
+ },
+ "dependencies":{
+  "@nestjs/common":"latest",
+  "@nestjs/core":"latest"
+ }
 }

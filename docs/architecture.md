@@ -1,14 +1,18 @@
-# Architecture
+# Architecture v1.0
 
-## Core
+Core:
 
 User
  |
 Workspace
  |
- +-- WB Accounts
- +-- Plugins
- +-- Analytics
- +-- Subscription
+ + WB Accounts
+ + Plugins
+ + Analytics
+ + Subscription
 
-The platform is designed for multiple WB tools.
+Future modules:
+- payments
+- support
+- notifications
+- admin panel

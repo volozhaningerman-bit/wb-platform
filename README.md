@@ -1,13 +1,16 @@
-# WB Platform
+# WB Platform Foundation v1.0
 
-SaaS platform for Wildberries seller plugins.
-
-Foundation v0.1
-
-Stack:
-- Next.js frontend
-- NestJS backend
-- Prisma + PostgreSQL
+Production foundation for Wildberries seller plugin platform.
 
 Architecture:
-User -> Workspace -> WB Accounts -> Plugins -> Analytics
+
+User
+ -> Workspace
+ -> WB Accounts
+ -> Plugins
+ -> Analytics
+
+Applications:
+- apps/web Next.js dashboard
+- apps/api NestJS API
+- packages/database Prisma

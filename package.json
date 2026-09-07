@@ -1,0 +1,11 @@
+{
+  "name": "wb-platform",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}

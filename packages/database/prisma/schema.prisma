@@ -1,47 +1,71 @@
-enum UserRole {
-  USER
-  ADMIN
+generator client {
+ provider = "prisma-client-js"
+}
+
+datasource db {
+ provider = "postgresql"
+ url = env("DATABASE_URL")
 }
 
 enum Plan {
-  FREE
-  FULL
+ FREE
+ FULL
 }
 
 model User {
-  id String @id @default(uuid())
-  email String @unique
-  passwordHash String
-  name String?
-  company String?
-  emailVerified Boolean @default(false)
-  role UserRole @default(USER)
-
-  sessions Session[]
-  subscriptions Subscription[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+ id String @id @default(uuid())
+ email String @unique
+ passwordHash String
+ name String?
+ company String?
+ workspaces WorkspaceMember[]
+ createdAt DateTime @default(now())
 }
 
-model Session {
-  id String @id @default(uuid())
-  userId String
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+model Workspace {
+ id String @id @default(uuid())
+ name String
+ members WorkspaceMember[]
+ wbAccounts WBAccount[]
+ subscription Subscription?
+ createdAt DateTime @default(now())
+}
 
-  tokenHash String @unique
-  expiresAt DateTime
+model WorkspaceMember {
+ id String @id @default(uuid())
+ userId String
+ workspaceId String
+ user User @relation(fields:[userId], references:[id])
+ workspace Workspace @relation(fields:[workspaceId], references:[id])
+}
 
-  createdAt DateTime @default(now())
+model WBAccount {
+ id String @id @default(uuid())
+ workspaceId String
+ name String
+ apiToken String
+ active Boolean @default(true)
+ workspace Workspace @relation(fields:[workspaceId], references:[id])
+}
+
+model Plugin {
+ id String @id @default(uuid())
+ name String
+ code String @unique
 }
 
 model Subscription {
-  id String @id @default(uuid())
-  userId String
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ id String @id @default(uuid())
+ workspaceId String @unique
+ plan Plan @default(FREE)
+ active Boolean @default(true)
+ workspace Workspace @relation(fields:[workspaceId], references:[id])
+}
 
-  plan Plan @default(FREE)
-  active Boolean @default(true)
-
-  createdAt DateTime @default(now())
+model AnalyticsSnapshot {
+ id String @id @default(uuid())
+ workspaceId String
+ date DateTime
+ revenue Float
+ profit Float
 }

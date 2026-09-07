@@ -1,15 +1,15 @@
 export class AuthService {
-  async register(email: string, password: string) {
-    return {
-      email,
-      status: 'created'
-    }
-  }
 
-  async login(email: string) {
-    return {
-      email,
-      token: 'jwt-placeholder'
-    }
+ async register(data:any){
+  return {
+   email:data.email,
+   created:true
   }
+ }
+
+ async login(){
+  return {
+   token:'session-token'
+  }
+ }
 }
