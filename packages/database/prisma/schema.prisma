@@ -14,37 +14,34 @@ model User {
   passwordHash String
   name String?
   company String?
+  emailVerified Boolean @default(false)
   role UserRole @default(USER)
-  workspaces Workspace[]
+
+  sessions Session[]
+  subscriptions Subscription[]
+
   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
-model Workspace {
+model Session {
   id String @id @default(uuid())
-  name String
-  ownerId String
-  owner User @relation(fields:[ownerId], references:[id])
-  wbAccounts WbAccount[]
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  tokenHash String @unique
+  expiresAt DateTime
+
   createdAt DateTime @default(now())
-}
-
-model WbAccount {
-  id String @id @default(uuid())
-  workspaceId String
-  workspace Workspace @relation(fields:[workspaceId], references:[id])
-  name String
-  sellerId String?
-  apiToken String
-}
-
-model Plugin {
-  id String @id @default(uuid())
-  name String
-  code String @unique
 }
 
 model Subscription {
   id String @id @default(uuid())
-  workspaceId String
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   plan Plan @default(FREE)
+  active Boolean @default(true)
+
+  createdAt DateTime @default(now())
 }
