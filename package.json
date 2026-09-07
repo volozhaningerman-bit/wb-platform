@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "turbo dev",
-    "build": "turbo build"
+    "build": "turbo build",
+    "db:validate": "prisma validate"
   },
   "devDependencies": {
-    "turbo": "latest"
+    "turbo": "^2.0.0"
   }
 }

@@ -1,6 +1,6 @@
-# WB Platform Foundation v1.0
+# WB Platform MVP Foundation Pack v1
 
-Production foundation for Wildberries seller plugin platform.
+SaaS platform for Wildberries seller tools.
 
 Architecture:
 
@@ -9,8 +9,10 @@ User
  -> WB Accounts
  -> Plugins
  -> Analytics
+ -> Subscription
+ -> Support
 
 Applications:
-- apps/web Next.js dashboard
-- apps/api NestJS API
-- packages/database Prisma
+- apps/web - Next.js dashboard
+- apps/api - NestJS API
+- packages/database - Prisma

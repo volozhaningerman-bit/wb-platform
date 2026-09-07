@@ -1,8 +1,8 @@
 export class WorkspaceService {
-
- create(name:string){
+ async status(){
   return {
-   name
+   module: "workspace",
+   ready: true
   }
  }
 }

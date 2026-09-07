@@ -1,10 +1,11 @@
 {
- "name":"api",
+ "name":"wb-platform-api",
  "scripts":{
   "start":"nest start"
  },
  "dependencies":{
   "@nestjs/common":"latest",
-  "@nestjs/core":"latest"
+  "@nestjs/core":"latest",
+  "class-validator":"latest"
  }
 }

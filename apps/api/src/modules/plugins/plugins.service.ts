@@ -1,7 +1,7 @@
-export class AuthService {
+export class PluginsService {
  async status(){
   return {
-   module: "auth",
+   module: "plugins",
    ready: true
   }
  }

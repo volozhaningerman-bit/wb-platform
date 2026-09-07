@@ -1,7 +1,7 @@
-export class AuthService {
+export class WbService {
  async status(){
   return {
-   module: "auth",
+   module: "wb",
    ready: true
   }
  }

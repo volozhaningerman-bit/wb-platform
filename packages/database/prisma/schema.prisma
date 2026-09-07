@@ -7,9 +7,20 @@ datasource db {
  url = env("DATABASE_URL")
 }
 
+enum UserRole {
+ USER
+ ADMIN
+}
+
 enum Plan {
  FREE
  FULL
+}
+
+enum TicketStatus {
+ OPEN
+ ANSWERED
+ CLOSED
 }
 
 model User {
@@ -18,54 +29,99 @@ model User {
  passwordHash String
  name String?
  company String?
- workspaces WorkspaceMember[]
+ role UserRole @default(USER)
+
+ memberships WorkspaceMember[]
+
+ tickets SupportTicket[]
+
  createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
 }
 
 model Workspace {
  id String @id @default(uuid())
  name String
+
  members WorkspaceMember[]
  wbAccounts WBAccount[]
+ plugins PluginInstall[]
  subscription Subscription?
+
  createdAt DateTime @default(now())
 }
 
 model WorkspaceMember {
  id String @id @default(uuid())
+
  userId String
  workspaceId String
+
  user User @relation(fields:[userId], references:[id])
  workspace Workspace @relation(fields:[workspaceId], references:[id])
 }
 
 model WBAccount {
  id String @id @default(uuid())
+
  workspaceId String
- name String
- apiToken String
- active Boolean @default(true)
  workspace Workspace @relation(fields:[workspaceId], references:[id])
+
+ name String
+ encryptedToken String
+ active Boolean @default(true)
 }
 
 model Plugin {
  id String @id @default(uuid())
  name String
  code String @unique
+
+ installs PluginInstall[]
+}
+
+model PluginInstall {
+ id String @id @default(uuid())
+
+ workspaceId String
+ pluginId String
+
+ workspace Workspace @relation(fields:[workspaceId], references:[id])
+ plugin Plugin @relation(fields:[pluginId], references:[id])
+
+ active Boolean @default(true)
 }
 
 model Subscription {
  id String @id @default(uuid())
+
  workspaceId String @unique
+ workspace Workspace @relation(fields:[workspaceId], references:[id])
+
  plan Plan @default(FREE)
  active Boolean @default(true)
- workspace Workspace @relation(fields:[workspaceId], references:[id])
 }
 
 model AnalyticsSnapshot {
  id String @id @default(uuid())
+
  workspaceId String
  date DateTime
+
  revenue Float
  profit Float
+ advertising Float
+}
+
+model SupportTicket {
+ id String @id @default(uuid())
+
+ userId String
+ user User @relation(fields:[userId], references:[id])
+
+ subject String
+ message String
+ status TicketStatus @default(OPEN)
+
+ createdAt DateTime @default(now())
 }

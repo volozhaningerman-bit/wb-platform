@@ -1,7 +1,7 @@
-export class AuthService {
+export class AdminService {
  async status(){
   return {
-   module: "auth",
+   module: "admin",
    ready: true
   }
  }
