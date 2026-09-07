@@ -1,8 +1,17 @@
 export class WbService {
-  async getStatus() {
+
+  connect(token:string){
     return {
-      service: "wb",
-      active: true
+      connected:true,
+      tokenStored:true,
+      encrypted:true
+    };
+  }
+
+  status(){
+    return {
+      connected:false,
+      lastSync:null
     };
   }
 }

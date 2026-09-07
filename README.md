@@ -1,17 +1,13 @@
-# WB Platform MVP Functional v1.4
+# WB Platform Runtime v1.5
 
-Large application foundation.
+Runtime foundation.
 
-Implemented domains:
-- authentication
-- users
-- workspace
-- Wildberries accounts
-- plugins
-- analytics
-- subscriptions
-- support
-- admin
+Focus:
+- real application wiring
+- API architecture
+- authentication flow
+- workspace flow
+- dashboard data layer
+- Railway preparation
 
-Goal:
-Create a SaaS platform for WB seller automation plugins.
+This version moves from structure to executable application layers.

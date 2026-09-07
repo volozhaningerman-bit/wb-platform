@@ -1,8 +1,19 @@
 export class WorkspaceService {
-  async getStatus() {
+
+  createWorkspace(userId:string,name:string){
     return {
-      service: "workspace",
-      active: true
+      owner:userId,
+      name,
+      created:true
     };
+  }
+
+  list(userId:string){
+    return [
+      {
+        owner:userId,
+        name:'Default workspace'
+      }
+    ];
   }
 }

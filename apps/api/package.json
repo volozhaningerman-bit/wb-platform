@@ -1,7 +1,18 @@
 {
- "name":"wb-platform-api",
- "scripts":{
-  "dev":"nest start --watch",
-  "build":"nest build"
- }
+  "name": "wb-platform-api",
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "latest",
+    "@nestjs/core": "latest",
+    "@nestjs/config": "latest",
+    "@prisma/client": "latest",
+    "bcrypt": "latest",
+    "jsonwebtoken": "latest",
+    "class-validator": "latest",
+    "class-transformer": "latest"
+  }
 }

@@ -1,5 +1,10 @@
 export class PrismaService {
-  async connect() {
-    return true;
+
+  async onModuleInit(){
+    console.log('Database connection initialized');
+  }
+
+  async onModuleDestroy(){
+    console.log('Database connection closed');
   }
 }
