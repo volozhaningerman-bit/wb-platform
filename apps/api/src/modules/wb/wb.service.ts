@@ -1,17 +1,15 @@
 export class WbService {
 
-  connect(token:string){
-    return {
-      connected:true,
-      tokenStored:true,
-      encrypted:true
-    };
-  }
+ connect(apiToken:string){
+  return {
+   connected:Boolean(apiToken),
+   syncStatus:'pending'
+  };
+ }
 
-  status(){
-    return {
-      connected:false,
-      lastSync:null
-    };
-  }
+ disconnect(){
+  return {
+   connected:false
+  };
+ }
 }

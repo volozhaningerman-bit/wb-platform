@@ -1,3 +1,7 @@
 export function PluginCard(){
- return <section>plugin-card</section>
+ return (
+  <section>
+   plugin-card
+  </section>
+ );
 }

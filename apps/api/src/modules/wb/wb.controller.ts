@@ -1,8 +1,9 @@
 export class WbController {
-  index() {
-    return {
-      module: "wb",
-      status: "ok"
-    };
-  }
+
+ status(){
+  return {
+   connected:false,
+   lastSync:null
+  };
+ }
 }

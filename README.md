@@ -1,13 +1,12 @@
-# WB Platform Runtime v1.5
+# WB Platform MVP v1.6 Working App
 
-Runtime foundation.
+Transition from architecture to working application layer.
 
-Focus:
-- real application wiring
-- API architecture
+Included:
+- NestJS API foundation
+- Next.js application foundation
 - authentication flow
 - workspace flow
+- WB connection flow
 - dashboard data layer
 - Railway preparation
-
-This version moves from structure to executable application layers.

@@ -1,6 +1,6 @@
 {
-  "$schema": "https://railway.app/railway.schema.json",
-  "deploy": {
-    "restartPolicyType": "ON_FAILURE"
+  "$schema":"https://railway.app/railway.schema.json",
+  "deploy":{
+    "restartPolicyType":"ON_FAILURE"
   }
 }

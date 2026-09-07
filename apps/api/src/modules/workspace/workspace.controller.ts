@@ -1,8 +1,10 @@
 export class WorkspaceController {
-  index() {
-    return {
-      module: "workspace",
-      status: "ok"
-    };
-  }
+
+ create(body:any){
+  return {
+   workspace:{
+    name:body.name
+   }
+  };
+ }
 }

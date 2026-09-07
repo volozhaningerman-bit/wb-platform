@@ -1,9 +1,9 @@
 export async function apiClient(
- path:string,
+ endpoint:string,
  options:RequestInit={}
 ){
  return fetch(
-  `${process.env.NEXT_PUBLIC_API_URL}${path}`,
+  `${process.env.NEXT_PUBLIC_API_URL}${endpoint}`,
   {
    ...options,
    headers:{

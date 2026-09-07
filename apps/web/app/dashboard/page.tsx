@@ -1,12 +1,7 @@
-import {DashboardOverview} from '@/components/dashboard/dashboard-overview';
-import {AnalyticsPanel} from '@/components/dashboard/analytics-panel';
-
-export default function DashboardPage(){
+export default function Page(){
  return (
   <main>
-   <h1>WB Platform</h1>
-   <DashboardOverview/>
-   <AnalyticsPanel/>
+   <h1>Главная</h1>
   </main>
  );
 }

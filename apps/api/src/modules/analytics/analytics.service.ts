@@ -1,24 +1,26 @@
 export class AnalyticsService {
 
-  overview(){
-    return {
-      revenue:0,
-      profit:0,
-      advertising:0
-    };
-  }
+ getOverview(){
+  return {
+   revenue:0,
+   profit:0,
+   advertising:0
+  };
+ }
 
-  categoryTree(){
-    return {
-      name:'Все категории',
-      children:[]
-    };
-  }
+ getCategoryTree(){
+  return {
+   name:'root',
+   children:[]
+  };
+ }
 
-  productMatrix(){
-    return {
-      x:'revenue',
-      y:'profit'
-    };
-  }
+ getProductMatrix(){
+  return {
+   axis:{
+    x:'revenue',
+    y:'profit'
+   }
+  };
+ }
 }

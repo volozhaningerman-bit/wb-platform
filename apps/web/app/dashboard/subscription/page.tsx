@@ -1,3 +1,7 @@
 export default function Page(){
- return <main><h1>dashboard/subscription</h1></main>
+ return (
+  <main>
+   <h1>Подписка</h1>
+  </main>
+ );
 }

@@ -1,6 +1,6 @@
 export class RegisterDto {
-  email!: string;
-  password!: string;
-  name?: string;
-  company?: string;
+ email!:string;
+ password!:string;
+ name?:string;
+ company?:string;
 }

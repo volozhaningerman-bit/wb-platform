@@ -1,3 +1,7 @@
 export function SubscriptionCard(){
- return <section>subscription-card</section>
+ return (
+  <section>
+   subscription-card
+  </section>
+ );
 }

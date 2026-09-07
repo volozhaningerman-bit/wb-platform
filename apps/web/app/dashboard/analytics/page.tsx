@@ -1,3 +1,7 @@
 export default function Page(){
- return <main><h1>dashboard/analytics</h1></main>
+ return (
+  <main>
+   <h1>Аналитика</h1>
+  </main>
+ );
 }
