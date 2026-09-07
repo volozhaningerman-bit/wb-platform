@@ -1,8 +1,10 @@
 export class AdminController {
-  health(){
-    return {
-      module: "admin",
-      status: "ready"
-    }
+
+ stats(){
+  return {
+   users:0,
+   subscriptions:0,
+   tickets:0
   }
+ }
 }

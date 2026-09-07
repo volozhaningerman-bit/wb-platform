@@ -1,8 +1,8 @@
 export class WbController {
-  health(){
-    return {
-      module: "wb",
-      status: "ready"
-    }
+
+ connect(){
+  return {
+   status:"token-required"
   }
+ }
 }

@@ -1,8 +1,12 @@
-# WB Platform MVP Functional v1.2
+# WB Platform MVP Functional v1.3
 
-Adds application layer above foundation:
-- auth preparation
-- WB integration boundary
-- plugin registry
-- analytics services
-- dashboard modules
+Real application layer preparation.
+
+Included:
+- authentication architecture
+- sessions
+- workspace creation
+- protected dashboard flow
+- WB integration layer
+- plugin permissions
+- audit logging

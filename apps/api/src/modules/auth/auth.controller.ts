@@ -1,8 +1,14 @@
 export class AuthController {
-  health(){
-    return {
-      module: "auth",
-      status: "ready"
-    }
+
+ register(){
+  return {
+   status:"registration-ready"
   }
+ }
+
+ login(){
+  return {
+   status:"login-ready"
+  }
+ }
 }

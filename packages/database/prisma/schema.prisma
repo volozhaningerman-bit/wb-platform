@@ -18,31 +18,37 @@ enum Plan {
  FULL
 }
 
-enum TicketStatus {
- OPEN
- IN_PROGRESS
- CLOSED
-}
-
 model User {
  id String @id @default(uuid())
  email String @unique
  passwordHash String
  name String?
+ company String?
  role Role @default(USER)
 
+ refreshTokens RefreshToken[]
  memberships WorkspaceMember[]
- sessions Session[]
- tickets SupportTicket[]
+ verification EmailVerification[]
+ auditLogs AuditLog[]
 
  createdAt DateTime @default(now())
 }
 
-model Session {
+model RefreshToken {
  id String @id @default(uuid())
  userId String
  tokenHash String
  expiresAt DateTime
+
+ user User @relation(fields:[userId], references:[id])
+}
+
+model EmailVerification {
+ id String @id @default(uuid())
+ userId String
+ code String
+ expiresAt DateTime
+
  user User @relation(fields:[userId], references:[id])
 }
 
@@ -52,7 +58,6 @@ model Workspace {
 
  members WorkspaceMember[]
  wbAccounts WBAccount[]
- plugins PluginInstall[]
  subscription Subscription?
 
  createdAt DateTime @default(now())
@@ -72,26 +77,23 @@ model WBAccount {
  workspaceId String
  name String
  encryptedToken String
- active Boolean @default(true)
 
  workspace Workspace @relation(fields:[workspaceId], references:[id])
 }
 
 model Plugin {
  id String @id @default(uuid())
- name String
  code String @unique
+ name String
 
- installs PluginInstall[]
+ permissions PluginPermission[]
 }
 
-model PluginInstall {
+model PluginPermission {
  id String @id @default(uuid())
- workspaceId String
  pluginId String
- active Boolean @default(true)
+ name String
 
- workspace Workspace @relation(fields:[workspaceId], references:[id])
  plugin Plugin @relation(fields:[pluginId], references:[id])
 }
 
@@ -99,26 +101,15 @@ model Subscription {
  id String @id @default(uuid())
  workspaceId String @unique
  plan Plan @default(FREE)
- active Boolean @default(true)
 
  workspace Workspace @relation(fields:[workspaceId], references:[id])
 }
 
-model AnalyticsSnapshot {
- id String @id @default(uuid())
- workspaceId String
- revenue Float
- profit Float
- advertising Float
- createdAt DateTime @default(now())
-}
-
-model SupportTicket {
+model AuditLog {
  id String @id @default(uuid())
  userId String
- subject String
- message String
- status TicketStatus @default(OPEN)
+ action String
+ createdAt DateTime @default(now())
 
  user User @relation(fields:[userId], references:[id])
 }

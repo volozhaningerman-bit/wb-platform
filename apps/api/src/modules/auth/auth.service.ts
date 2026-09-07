@@ -1,7 +1,13 @@
 export class AuthService {
-  async info(){
-    return {
-      service: "auth"
-    }
-  }
+
+ async hashPassword(password:string){
+  return `hash:${password}`;
+ }
+
+ async createSession(){
+  return {
+   accessToken:"jwt",
+   refreshToken:"refresh"
+  };
+ }
 }

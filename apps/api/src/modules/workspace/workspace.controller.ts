@@ -1,8 +1,8 @@
 export class WorkspaceController {
-  health(){
-    return {
-      module: "workspace",
-      status: "ready"
-    }
+
+ create(){
+  return {
+   created:true
   }
+ }
 }
