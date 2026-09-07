@@ -1,8 +1,7 @@
 export class AnalyticsService {
- async status(){
-  return {
-   module: "analytics",
-   ready: true
+  async info(){
+    return {
+      service: "analytics"
+    }
   }
- }
 }

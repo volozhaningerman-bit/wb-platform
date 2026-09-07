@@ -1,5 +1,1 @@
-async function bootstrap(){
- console.log("WB Platform API started")
-}
-
-bootstrap()
+console.log("WB Platform API bootstrap")

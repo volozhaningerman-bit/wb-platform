@@ -1,8 +1,7 @@
 export class AuthService {
- async status(){
-  return {
-   module: "auth",
-   ready: true
+  async info(){
+    return {
+      service: "auth"
+    }
   }
- }
 }

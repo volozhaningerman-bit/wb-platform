@@ -1,7 +1,7 @@
-export class AuthController {
+export class WbController {
   health(){
     return {
-      module: "auth",
+      module: "wb",
       status: "ready"
     }
   }

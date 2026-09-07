@@ -1,8 +1,7 @@
 export class PluginsService {
- async status(){
-  return {
-   module: "plugins",
-   ready: true
+  async info(){
+    return {
+      service: "plugins"
+    }
   }
- }
 }

@@ -4,6 +4,6 @@ services:
     environment:
       POSTGRES_USER: wb
       POSTGRES_PASSWORD: wb
-      POSTGRES_DB: platform
+      POSTGRES_DB: wb_platform
     ports:
       - "5432:5432"

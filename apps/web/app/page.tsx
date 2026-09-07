@@ -1,3 +1,7 @@
-export default function Home(){
- return <main>WB Platform</main>
+export default function Page(){
+ return (
+  <main>
+   <h1>Главная страница WB Platform</h1>
+  </main>
+ )
 }

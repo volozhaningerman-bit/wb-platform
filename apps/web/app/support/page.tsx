@@ -1,7 +1,7 @@
 export default function Page(){
  return (
   <main>
-   <h1>Авторизация</h1>
+   <h1>Поддержка</h1>
   </main>
  )
 }

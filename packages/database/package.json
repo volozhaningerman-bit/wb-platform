@@ -3,11 +3,5 @@
   "scripts": {
     "generate": "prisma generate",
     "validate": "prisma validate"
-  },
-  "dependencies": {
-    "@prisma/client": "latest"
-  },
-  "devDependencies": {
-    "prisma": "latest"
   }
 }

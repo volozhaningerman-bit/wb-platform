@@ -7,9 +7,10 @@ datasource db {
  url = env("DATABASE_URL")
 }
 
-enum UserRole {
+enum Role {
  USER
  ADMIN
+ OWNER
 }
 
 enum Plan {
@@ -19,7 +20,7 @@ enum Plan {
 
 enum TicketStatus {
  OPEN
- ANSWERED
+ IN_PROGRESS
  CLOSED
 }
 
@@ -28,15 +29,21 @@ model User {
  email String @unique
  passwordHash String
  name String?
- company String?
- role UserRole @default(USER)
+ role Role @default(USER)
 
  memberships WorkspaceMember[]
-
+ sessions Session[]
  tickets SupportTicket[]
 
  createdAt DateTime @default(now())
- updatedAt DateTime @updatedAt
+}
+
+model Session {
+ id String @id @default(uuid())
+ userId String
+ tokenHash String
+ expiresAt DateTime
+ user User @relation(fields:[userId], references:[id])
 }
 
 model Workspace {
@@ -53,7 +60,6 @@ model Workspace {
 
 model WorkspaceMember {
  id String @id @default(uuid())
-
  userId String
  workspaceId String
 
@@ -63,13 +69,12 @@ model WorkspaceMember {
 
 model WBAccount {
  id String @id @default(uuid())
-
  workspaceId String
- workspace Workspace @relation(fields:[workspaceId], references:[id])
-
  name String
  encryptedToken String
  active Boolean @default(true)
+
+ workspace Workspace @relation(fields:[workspaceId], references:[id])
 }
 
 model Plugin {
@@ -82,46 +87,38 @@ model Plugin {
 
 model PluginInstall {
  id String @id @default(uuid())
-
  workspaceId String
  pluginId String
+ active Boolean @default(true)
 
  workspace Workspace @relation(fields:[workspaceId], references:[id])
  plugin Plugin @relation(fields:[pluginId], references:[id])
-
- active Boolean @default(true)
 }
 
 model Subscription {
  id String @id @default(uuid())
-
  workspaceId String @unique
- workspace Workspace @relation(fields:[workspaceId], references:[id])
-
  plan Plan @default(FREE)
  active Boolean @default(true)
+
+ workspace Workspace @relation(fields:[workspaceId], references:[id])
 }
 
 model AnalyticsSnapshot {
  id String @id @default(uuid())
-
  workspaceId String
- date DateTime
-
  revenue Float
  profit Float
  advertising Float
+ createdAt DateTime @default(now())
 }
 
 model SupportTicket {
  id String @id @default(uuid())
-
  userId String
- user User @relation(fields:[userId], references:[id])
-
  subject String
  message String
  status TicketStatus @default(OPEN)
 
- createdAt DateTime @default(now())
+ user User @relation(fields:[userId], references:[id])
 }

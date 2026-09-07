@@ -1,8 +1,7 @@
 export class SubscriptionService {
- async status(){
-  return {
-   module: "subscription",
-   ready: true
+  async info(){
+    return {
+      service: "subscription"
+    }
   }
- }
 }

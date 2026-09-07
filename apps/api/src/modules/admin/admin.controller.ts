@@ -1,7 +1,7 @@
-export class AuthController {
+export class AdminController {
   health(){
     return {
-      module: "auth",
+      module: "admin",
       status: "ready"
     }
   }

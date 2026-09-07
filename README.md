@@ -1,18 +1,21 @@
-# WB Platform MVP Foundation Pack v1
+# WB Platform MVP Core v1.1
 
-SaaS platform for Wildberries seller tools.
+Production-oriented foundation for Wildberries seller plugin ecosystem.
 
-Architecture:
+Core domains:
+- Authentication
+- Users
+- Workspace
+- WB Accounts
+- Plugins
+- Analytics
+- Subscription
+- Support
+- Admin
 
-User
- -> Workspace
- -> WB Accounts
- -> Plugins
- -> Analytics
- -> Subscription
- -> Support
-
-Applications:
-- apps/web - Next.js dashboard
-- apps/api - NestJS API
-- packages/database - Prisma
+Stack:
+- Next.js
+- NestJS
+- Prisma
+- PostgreSQL
+- Railway

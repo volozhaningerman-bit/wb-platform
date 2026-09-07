@@ -1,7 +1,7 @@
-export class AuthController {
+export class PluginsController {
   health(){
     return {
-      module: "auth",
+      module: "plugins",
       status: "ready"
     }
   }

@@ -1,8 +1,7 @@
 export class UsersService {
- async status(){
-  return {
-   module: "users",
-   ready: true
+  async info(){
+    return {
+      service: "users"
+    }
   }
- }
 }
