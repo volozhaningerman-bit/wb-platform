@@ -1,0 +1,50 @@
+enum UserRole {
+  USER
+  ADMIN
+}
+
+enum Plan {
+  FREE
+  FULL
+}
+
+model User {
+  id String @id @default(uuid())
+  email String @unique
+  passwordHash String
+  name String?
+  company String?
+  role UserRole @default(USER)
+  workspaces Workspace[]
+  createdAt DateTime @default(now())
+}
+
+model Workspace {
+  id String @id @default(uuid())
+  name String
+  ownerId String
+  owner User @relation(fields:[ownerId], references:[id])
+  wbAccounts WbAccount[]
+  createdAt DateTime @default(now())
+}
+
+model WbAccount {
+  id String @id @default(uuid())
+  workspaceId String
+  workspace Workspace @relation(fields:[workspaceId], references:[id])
+  name String
+  sellerId String?
+  apiToken String
+}
+
+model Plugin {
+  id String @id @default(uuid())
+  name String
+  code String @unique
+}
+
+model Subscription {
+  id String @id @default(uuid())
+  workspaceId String
+  plan Plan @default(FREE)
+}

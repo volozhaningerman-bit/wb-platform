@@ -1,0 +1,7 @@
+{
+  "name": "wb-platform-api",
+  "private": true,
+  "scripts": {
+    "start": "nest start"
+  }
+}
