@@ -1,7 +1,7 @@
-export default function Page(){
+export default function SupportPage(){
  return (
   <main>
-   <h1>Поддержка</h1>
+   <h1>Support</h1>
   </main>
- )
+ );
 }

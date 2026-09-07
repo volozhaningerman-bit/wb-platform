@@ -1,12 +1,19 @@
-# WB Platform MVP v1.8 Real Backend
+# WB Platform MVP v2 Combined Core
 
-Transition to real MVP backend.
+Large combined implementation block.
 
-Added:
-- real database layer preparation
-- API contracts
-- authentication services
-- workspace services
-- WB account management
-- dashboard data endpoints
-- validation structure
+Included:
+- real application domains
+- database layer preparation
+- authentication flow
+- workspace management
+- WB accounts
+- plugin system
+- analytics API
+- subscriptions
+- support
+- admin foundation
+- notifications foundation
+
+Goal:
+Move faster by combining compatible stages instead of tiny commits.

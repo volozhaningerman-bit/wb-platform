@@ -1,21 +1,7 @@
-export default function Dashboard(){
-
- const cards=[
-  ['Оборот','0 ₽'],
-  ['Прибыль','0 ₽'],
-  ['Реклама','0 ₽']
- ];
-
+export default function DashboardPage(){
  return (
   <main>
-   <h1>Главная</h1>
-
-   {cards.map(c=>(
-    <section key={c[0]}>
-     <span>{c[0]}</span>
-     <strong>{c[1]}</strong>
-    </section>
-   ))}
+   <h1>Dashboard</h1>
   </main>
  );
 }

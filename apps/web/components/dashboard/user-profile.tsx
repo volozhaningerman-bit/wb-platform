@@ -1,0 +1,7 @@
+export function UserProfile(){
+ return (
+  <section>
+   <h2>user-profile</h2>
+  </section>
+ );
+}

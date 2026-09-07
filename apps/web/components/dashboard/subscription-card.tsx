@@ -1,9 +1,7 @@
-export function SubscriptionCard() {
-  return (
-    <section>
-      <h3>Тариф</h3>
-      <strong>FREE</strong>
-      <p>Доступ к базовым функциям.</p>
-    </section>
-  )
+export function SubscriptionCard(){
+ return (
+  <section>
+   <h2>subscription-card</h2>
+  </section>
+ );
 }
