@@ -1,8 +1,15 @@
 export class SubscriptionController {
-  index() {
+
+  current(){
     return {
-      module: "subscription",
-      status: "ok"
+      plan:'FREE',
+      active:true
+    };
+  }
+
+  upgrade(){
+    return {
+      payment:'pending'
     };
   }
 }

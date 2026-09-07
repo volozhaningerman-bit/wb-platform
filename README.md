@@ -1,13 +1,12 @@
-# WB Platform MVP v1.7 First Deploy Candidate
+# WB Platform MVP v1.8 Real Backend
 
-Goal:
-First deployable version.
+Transition to real MVP backend.
 
-Includes:
-- NestJS runtime
-- Next.js dashboard shell
-- Prisma runtime preparation
-- Railway deployment files
-- health checks
-- authentication foundation
-- workspace foundation
+Added:
+- real database layer preparation
+- API contracts
+- authentication services
+- workspace services
+- WB account management
+- dashboard data endpoints
+- validation structure

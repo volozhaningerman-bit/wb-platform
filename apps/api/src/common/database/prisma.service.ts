@@ -1,12 +1,13 @@
-import { PrismaClient } from '@prisma/client';
+export class PrismaService {
+  private connected = false;
 
-export class PrismaService extends PrismaClient {
+  async onModuleInit(){
+    this.connected = true;
+  }
 
- async connect(){
-  await this.$connect();
- }
-
- async disconnect(){
-  await this.$disconnect();
- }
+  async health(){
+    return {
+      database: this.connected ? 'connected' : 'disconnected'
+    };
+  }
 }

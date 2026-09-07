@@ -1,18 +1,25 @@
-import { apiResponse } from '../../common/http/api-response';
-
 export class AuthController {
 
- async register(body:any){
-  return apiResponse({
-   email:body.email,
-   next:'create-workspace'
-  });
- }
+  async register(dto:any){
+    return {
+      user:{
+        email:dto.email,
+        name:dto.name ?? null
+      },
+      next:'workspace-create'
+    };
+  }
 
- async login(body:any){
-  return apiResponse({
-   email:body.email,
-   authenticated:true
-  });
- }
+  async login(dto:any){
+    return {
+      authenticated:true,
+      user:dto.email
+    };
+  }
+
+  async logout(){
+    return {
+      success:true
+    };
+  }
 }

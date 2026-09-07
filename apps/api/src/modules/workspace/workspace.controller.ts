@@ -1,10 +1,16 @@
 export class WorkspaceController {
 
- create(body:any){
-  return {
-   workspace:{
-    name:body.name
-   }
-  };
- }
+  create(dto:any){
+    return {
+      id:'workspace-id',
+      name:dto.name
+    };
+  }
+
+  current(){
+    return {
+      id:'workspace-id',
+      name:'Default workspace'
+    };
+  }
 }

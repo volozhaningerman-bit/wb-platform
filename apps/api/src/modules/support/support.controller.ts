@@ -1,8 +1,10 @@
 export class SupportController {
-  index() {
+
+  create(dto:any){
     return {
-      module: "support",
-      status: "ok"
+      ticketId:'new-ticket',
+      status:'OPEN',
+      subject:dto.subject
     };
   }
 }

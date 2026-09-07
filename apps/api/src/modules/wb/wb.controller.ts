@@ -1,16 +1,18 @@
 export class WbController {
 
- connect(token:string){
-  return {
-   connected:Boolean(token),
-   encrypted:true
-  };
- }
+  connect(dto:any){
+    return {
+      status:'connected',
+      shop:dto.name
+    };
+  }
 
- status(){
-  return {
-   connected:false,
-   lastSync:null
-  };
- }
+  list(){
+    return [
+      {
+        name:'WB cabinet',
+        status:'active'
+      }
+    ];
+  }
 }

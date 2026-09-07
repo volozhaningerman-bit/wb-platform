@@ -1,8 +1,23 @@
 export class AnalyticsController {
-  index() {
+
+  overview(){
     return {
-      module: "analytics",
-      status: "ok"
+      sales:0,
+      profit:0,
+      advertising:0
+    };
+  }
+
+  categories(){
+    return {
+      name:'all',
+      children:[]
+    };
+  }
+
+  products(){
+    return {
+      items:[]
     };
   }
 }

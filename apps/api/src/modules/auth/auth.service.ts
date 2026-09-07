@@ -1,21 +1,20 @@
-import * as bcrypt from 'bcrypt';
-
 export class AuthService {
 
- async register(email:string,password:string){
-  const passwordHash = await bcrypt.hash(password,12);
+  async createUser(data:any){
+    return {
+      id:'generated-user-id',
+      email:data.email
+    };
+  }
 
-  return {
-   email,
-   passwordHash,
-   created:true
-  };
- }
+  async createTokens(userId:string){
+    return {
+      accessToken:`access-${userId}`,
+      refreshToken:`refresh-${userId}`
+    };
+  }
 
- async login(){
-  return {
-   accessToken:'jwt-token',
-   refreshToken:'refresh-token'
-  };
- }
+  async verifyToken(){
+    return true;
+  }
 }
