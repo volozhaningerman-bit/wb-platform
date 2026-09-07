@@ -1,8 +1,8 @@
 export class SubscriptionService {
-  async getStatus() {
-    return {
-      service: "subscription",
-      active: true
-    };
+ async execute(){
+  return {
+   module:"subscription",
+   timestamp:new Date()
   }
+ }
 }

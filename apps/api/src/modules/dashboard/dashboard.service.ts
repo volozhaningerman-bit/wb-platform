@@ -1,16 +1,8 @@
 export class DashboardService {
-
- getMain(){
+ async execute(){
   return {
-   metrics:{
-    revenue:0,
-    profit:0,
-    advertising:0
-   },
-   charts:{
-    categories:true,
-    products:true
-   }
-  };
+   module:"dashboard",
+   timestamp:new Date()
+  }
  }
 }

@@ -3,5 +3,5 @@ export default function Page(){
   <main>
    <h1>Subscription</h1>
   </main>
- );
+ )
 }

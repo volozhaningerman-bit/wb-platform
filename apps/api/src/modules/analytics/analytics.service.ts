@@ -1,11 +1,8 @@
 export class AnalyticsService {
-
- dashboard(){
+ async execute(){
   return {
-   revenue:0,
-   profit:0,
-   advertising:0,
-   categories:[]
-  };
+   module:"analytics",
+   timestamp:new Date()
+  }
  }
 }

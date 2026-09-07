@@ -1,8 +1,8 @@
 export class PluginsController {
-  index() {
-    return {
-      module: "plugins",
-      status: "ok"
-    };
+ get(){
+  return {
+   module:"plugins",
+   status:"ready"
   }
+ }
 }

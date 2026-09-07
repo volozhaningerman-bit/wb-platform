@@ -1,8 +1,8 @@
 export class AdminController {
-  index() {
-    return {
-      module: "admin",
-      status: "ok"
-    };
+ get(){
+  return {
+   module:"admin",
+   status:"ready"
   }
+ }
 }

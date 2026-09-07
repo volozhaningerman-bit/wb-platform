@@ -1,18 +1,8 @@
 export function CategoryDonut(){
  return (
   <section className="card">
-   <h2>Структура оборота</h2>
-   <p>
-    Категории
-    →
-    подкатегории
-    →
-    товары
-   </p>
-
-   <div>
-    ◯
-   </div>
+   <h3>category donut</h3>
+   <p>WB Platform component</p>
   </section>
- );
+ )
 }

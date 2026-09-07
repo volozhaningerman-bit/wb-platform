@@ -1,14 +1,14 @@
-# WB Platform v3 Product UI
+# WB Platform v4 Full Product Interface
 
-First visual product layer.
-
-Goal:
-Create a real seller dashboard experience.
+Large combined UI + product layer.
 
 Included:
-- design system foundation
-- dashboard layout
+- dashboard interface
+- responsive layout foundation
 - analytics widgets
-- plugin cards
+- plugin management UI
+- WB connection UI
 - subscription UI
 - support UI
+- profile UI
+- admin UI foundation

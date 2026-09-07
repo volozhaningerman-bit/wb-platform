@@ -1,7 +1,7 @@
-export function KpiCard(){
+export function TopProducts(){
  return (
   <section className="card">
-   <h3>kpi card</h3>
+   <h3>top products</h3>
    <p>WB Platform component</p>
   </section>
  )

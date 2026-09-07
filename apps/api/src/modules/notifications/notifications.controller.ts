@@ -1,8 +1,8 @@
 export class NotificationsController {
-  index() {
-    return {
-      module: "notifications",
-      status: "ok"
-    };
+ get(){
+  return {
+   module:"notifications",
+   status:"ready"
   }
+ }
 }

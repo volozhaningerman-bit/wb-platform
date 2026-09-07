@@ -1,8 +1,8 @@
 export class SupportService {
-  async getStatus() {
-    return {
-      service: "support",
-      active: true
-    };
+ async execute(){
+  return {
+   module:"support",
+   timestamp:new Date()
   }
+ }
 }

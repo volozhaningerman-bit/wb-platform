@@ -1,7 +1,8 @@
 export function SubscriptionCard(){
  return (
-  <section>
-   <h2>subscription-card</h2>
+  <section className="card">
+   <h3>subscription card</h3>
+   <p>WB Platform component</p>
   </section>
- );
+ )
 }

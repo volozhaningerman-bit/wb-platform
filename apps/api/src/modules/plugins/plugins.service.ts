@@ -1,8 +1,8 @@
 export class PluginsService {
-  async getStatus() {
-    return {
-      service: "plugins",
-      active: true
-    };
+ async execute(){
+  return {
+   module:"plugins",
+   timestamp:new Date()
   }
+ }
 }

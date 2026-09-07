@@ -1,7 +1,7 @@
-export function KpiCard(){
+export function SyncStatus(){
  return (
   <section className="card">
-   <h3>kpi card</h3>
+   <h3>sync status</h3>
    <p>WB Platform component</p>
   </section>
  )

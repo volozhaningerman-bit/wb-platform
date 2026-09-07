@@ -1,15 +1,8 @@
 export class SubscriptionController {
-
-  current(){
-    return {
-      plan:'FREE',
-      active:true
-    };
+ get(){
+  return {
+   module:"subscription",
+   status:"ready"
   }
-
-  upgrade(){
-    return {
-      payment:'pending'
-    };
-  }
+ }
 }

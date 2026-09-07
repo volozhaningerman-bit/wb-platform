@@ -1,8 +1,8 @@
 export class AdminService {
-  async getStatus() {
-    return {
-      service: "admin",
-      active: true
-    };
+ async execute(){
+  return {
+   module:"admin",
+   timestamp:new Date()
   }
+ }
 }

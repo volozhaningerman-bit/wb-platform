@@ -1,15 +1,8 @@
 export class WbService {
-
- connect(apiToken:string){
+ async execute(){
   return {
-   connected:Boolean(apiToken),
-   syncStatus:'pending'
-  };
- }
-
- disconnect(){
-  return {
-   connected:false
-  };
+   module:"wb",
+   timestamp:new Date()
+  }
  }
 }

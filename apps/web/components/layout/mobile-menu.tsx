@@ -1,7 +1,7 @@
-export function Sidebar(){
+export function MobileMenu(){
  return (
   <section className="card">
-   sidebar
+   mobile-menu
   </section>
  )
 }
