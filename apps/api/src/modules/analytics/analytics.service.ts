@@ -1,7 +1,9 @@
 export class AnalyticsService {
-  async info(){
+  overview(){
     return {
-      service: "analytics"
-    }
+      revenue:0,
+      profit:0,
+      advertising:0
+    };
   }
 }

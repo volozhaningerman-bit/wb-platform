@@ -1,21 +1,8 @@
-# WB Platform MVP Core v1.1
+# WB Platform MVP Functional v1.2
 
-Production-oriented foundation for Wildberries seller plugin ecosystem.
-
-Core domains:
-- Authentication
-- Users
-- Workspace
-- WB Accounts
-- Plugins
-- Analytics
-- Subscription
-- Support
-- Admin
-
-Stack:
-- Next.js
-- NestJS
-- Prisma
-- PostgreSQL
-- Railway
+Adds application layer above foundation:
+- auth preparation
+- WB integration boundary
+- plugin registry
+- analytics services
+- dashboard modules
