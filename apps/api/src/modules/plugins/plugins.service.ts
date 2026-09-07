@@ -1,7 +1,8 @@
 export class PluginsService {
-  async info(){
+  async getStatus() {
     return {
-      service: "plugins"
-    }
+      service: "plugins",
+      active: true
+    };
   }
 }

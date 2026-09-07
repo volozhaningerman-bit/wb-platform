@@ -1,7 +1,8 @@
 export class AdminService {
-  async info(){
+  async getStatus() {
     return {
-      service: "admin"
-    }
+      service: "admin",
+      active: true
+    };
   }
 }

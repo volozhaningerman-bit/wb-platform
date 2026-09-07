@@ -1,7 +1,3 @@
 export default function Page(){
- return (
-  <main>
-   <h1>Настройки</h1>
-  </main>
- )
+ return <main><h1>settings</h1></main>
 }

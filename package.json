@@ -1,12 +1,9 @@
 {
-  "name": "wb-platform",
-  "private": true,
-  "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "db:validate": "prisma validate"
-  },
-  "devDependencies": {
-    "turbo": "^2.0.0"
+  "name":"wb-platform",
+  "private":true,
+  "scripts":{
+    "dev":"turbo dev",
+    "build":"turbo build",
+    "lint":"turbo lint"
   }
 }

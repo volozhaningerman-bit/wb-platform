@@ -1,8 +1,8 @@
 export class WbController {
-
- connect(){
-  return {
-   status:"token-required"
+  index() {
+    return {
+      module: "wb",
+      status: "ok"
+    };
   }
- }
 }

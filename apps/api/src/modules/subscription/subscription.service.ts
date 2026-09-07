@@ -1,7 +1,8 @@
 export class SubscriptionService {
-  async info(){
+  async getStatus() {
     return {
-      service: "subscription"
-    }
+      service: "subscription",
+      active: true
+    };
   }
 }

@@ -1,12 +1,17 @@
-# WB Platform MVP Functional v1.3
+# WB Platform MVP Functional v1.4
 
-Real application layer preparation.
+Large application foundation.
 
-Included:
-- authentication architecture
-- sessions
-- workspace creation
-- protected dashboard flow
-- WB integration layer
-- plugin permissions
-- audit logging
+Implemented domains:
+- authentication
+- users
+- workspace
+- Wildberries accounts
+- plugins
+- analytics
+- subscriptions
+- support
+- admin
+
+Goal:
+Create a SaaS platform for WB seller automation plugins.

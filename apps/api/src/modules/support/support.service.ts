@@ -1,7 +1,8 @@
 export class SupportService {
-  async info(){
+  async getStatus() {
     return {
-      service: "support"
-    }
+      service: "support",
+      active: true
+    };
   }
 }

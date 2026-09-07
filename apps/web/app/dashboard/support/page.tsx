@@ -1,3 +1,3 @@
-export default function SupportPage(){
- return <main>Поддержка</main>
+export default function Page(){
+ return <main><h1>dashboard/support</h1></main>
 }

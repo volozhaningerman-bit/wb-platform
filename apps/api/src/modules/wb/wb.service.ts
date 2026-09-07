@@ -1,7 +1,8 @@
 export class WbService {
-  async info(){
+  async getStatus() {
     return {
-      service: "wb"
-    }
+      service: "wb",
+      active: true
+    };
   }
 }

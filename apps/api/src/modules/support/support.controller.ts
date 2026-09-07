@@ -1,8 +1,8 @@
 export class SupportController {
-  health(){
+  index() {
     return {
       module: "support",
-      status: "ready"
-    }
+      status: "ok"
+    };
   }
 }

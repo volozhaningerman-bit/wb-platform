@@ -1,1 +1,1 @@
-console.log("WB Platform API bootstrap")
+console.log("WB Platform API")

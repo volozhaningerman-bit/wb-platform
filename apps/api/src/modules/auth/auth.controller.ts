@@ -1,14 +1,8 @@
 export class AuthController {
-
- register(){
-  return {
-   status:"registration-ready"
+  index() {
+    return {
+      module: "auth",
+      status: "ok"
+    };
   }
- }
-
- login(){
-  return {
-   status:"login-ready"
-  }
- }
 }

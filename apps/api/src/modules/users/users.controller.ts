@@ -1,8 +1,8 @@
 export class UsersController {
-  health(){
+  index() {
     return {
       module: "users",
-      status: "ready"
-    }
+      status: "ok"
+    };
   }
 }

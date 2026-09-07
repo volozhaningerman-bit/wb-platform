@@ -1,7 +1,3 @@
 export function KpiCard(){
- return (
-  <section>
-   kpi-card
-  </section>
- )
+ return <section>kpi-card</section>
 }

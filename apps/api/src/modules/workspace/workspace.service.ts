@@ -1,7 +1,8 @@
 export class WorkspaceService {
-  async info(){
+  async getStatus() {
     return {
-      service: "workspace"
-    }
+      service: "workspace",
+      active: true
+    };
   }
 }

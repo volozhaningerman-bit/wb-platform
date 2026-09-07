@@ -1,3 +1,3 @@
-export default function WbPage(){
- return <main>Подключение WB кабинета</main>
+export default function Page(){
+ return <main><h1>dashboard/wb</h1></main>
 }

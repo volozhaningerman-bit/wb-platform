@@ -1,10 +1,10 @@
 generator client {
- provider = "prisma-client-js"
+ provider="prisma-client-js"
 }
 
 datasource db {
- provider = "postgresql"
- url = env("DATABASE_URL")
+ provider="postgresql"
+ url=env("DATABASE_URL")
 }
 
 enum Role {
@@ -23,33 +23,17 @@ model User {
  email String @unique
  passwordHash String
  name String?
- company String?
  role Role @default(USER)
 
- refreshTokens RefreshToken[]
- memberships WorkspaceMember[]
- verification EmailVerification[]
- auditLogs AuditLog[]
-
- createdAt DateTime @default(now())
+ workspaces WorkspaceMember[]
+ sessions Session[]
 }
 
-model RefreshToken {
+model Session {
  id String @id @default(uuid())
  userId String
  tokenHash String
- expiresAt DateTime
-
- user User @relation(fields:[userId], references:[id])
-}
-
-model EmailVerification {
- id String @id @default(uuid())
- userId String
- code String
- expiresAt DateTime
-
- user User @relation(fields:[userId], references:[id])
+ user User @relation(fields:[userId],references:[id])
 }
 
 model Workspace {
@@ -58,9 +42,8 @@ model Workspace {
 
  members WorkspaceMember[]
  wbAccounts WBAccount[]
+ plugins PluginInstall[]
  subscription Subscription?
-
- createdAt DateTime @default(now())
 }
 
 model WorkspaceMember {
@@ -68,8 +51,8 @@ model WorkspaceMember {
  userId String
  workspaceId String
 
- user User @relation(fields:[userId], references:[id])
- workspace Workspace @relation(fields:[workspaceId], references:[id])
+ user User @relation(fields:[userId],references:[id])
+ workspace Workspace @relation(fields:[workspaceId],references:[id])
 }
 
 model WBAccount {
@@ -78,38 +61,29 @@ model WBAccount {
  name String
  encryptedToken String
 
- workspace Workspace @relation(fields:[workspaceId], references:[id])
+ workspace Workspace @relation(fields:[workspaceId],references:[id])
 }
 
 model Plugin {
  id String @id @default(uuid())
  code String @unique
  name String
-
- permissions PluginPermission[]
 }
 
-model PluginPermission {
+model PluginInstall {
  id String @id @default(uuid())
+ workspaceId String
  pluginId String
- name String
-
- plugin Plugin @relation(fields:[pluginId], references:[id])
 }
 
 model Subscription {
  id String @id @default(uuid())
- workspaceId String @unique
+ workspaceId String
  plan Plan @default(FREE)
-
- workspace Workspace @relation(fields:[workspaceId], references:[id])
 }
 
-model AuditLog {
+model SupportTicket {
  id String @id @default(uuid())
- userId String
- action String
- createdAt DateTime @default(now())
-
- user User @relation(fields:[userId], references:[id])
+ title String
+ message String
 }

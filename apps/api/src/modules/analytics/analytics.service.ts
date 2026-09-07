@@ -1,9 +1,8 @@
 export class AnalyticsService {
-  overview(){
+  async getStatus() {
     return {
-      revenue:0,
-      profit:0,
-      advertising:0
+      service: "analytics",
+      active: true
     };
   }
 }

@@ -1,8 +1,8 @@
 export class AnalyticsController {
-  health(){
+  index() {
     return {
       module: "analytics",
-      status: "ready"
-    }
+      status: "ok"
+    };
   }
 }

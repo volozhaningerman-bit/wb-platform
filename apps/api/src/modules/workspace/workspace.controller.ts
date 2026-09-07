@@ -1,8 +1,8 @@
 export class WorkspaceController {
-
- create(){
-  return {
-   created:true
+  index() {
+    return {
+      module: "workspace",
+      status: "ok"
+    };
   }
- }
 }

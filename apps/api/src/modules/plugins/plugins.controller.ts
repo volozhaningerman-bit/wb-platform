@@ -1,8 +1,8 @@
 export class PluginsController {
-  health(){
+  index() {
     return {
       module: "plugins",
-      status: "ready"
-    }
+      status: "ok"
+    };
   }
 }

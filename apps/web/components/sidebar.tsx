@@ -1,7 +1,3 @@
 export function Sidebar(){
- return (
-  <section>
-   sidebar
-  </section>
- )
+ return <section>sidebar</section>
 }

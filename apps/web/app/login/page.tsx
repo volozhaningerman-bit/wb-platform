@@ -1,7 +1,3 @@
 export default function Page(){
- return (
-  <main>
-   <h1>Авторизация</h1>
-  </main>
- )
+ return <main><h1>login</h1></main>
 }

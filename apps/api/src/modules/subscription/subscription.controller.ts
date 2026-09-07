@@ -1,8 +1,8 @@
 export class SubscriptionController {
-  health(){
+  index() {
     return {
       module: "subscription",
-      status: "ready"
-    }
+      status: "ok"
+    };
   }
 }
