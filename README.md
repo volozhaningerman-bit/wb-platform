@@ -1,19 +1,14 @@
-# WB Platform MVP v2 Combined Core
+# WB Platform v3 Product UI
 
-Large combined implementation block.
-
-Included:
-- real application domains
-- database layer preparation
-- authentication flow
-- workspace management
-- WB accounts
-- plugin system
-- analytics API
-- subscriptions
-- support
-- admin foundation
-- notifications foundation
+First visual product layer.
 
 Goal:
-Move faster by combining compatible stages instead of tiny commits.
+Create a real seller dashboard experience.
+
+Included:
+- design system foundation
+- dashboard layout
+- analytics widgets
+- plugin cards
+- subscription UI
+- support UI

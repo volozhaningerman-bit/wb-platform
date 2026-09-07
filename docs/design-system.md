@@ -1,21 +1,18 @@
-# Design System v0.4
+# Design System
 
-Цель:
-Интерфейс профессионального инструмента для WB селлеров.
+Direction:
+- professional SaaS
+- clean seller workspace
+- no AI-template feeling
 
-Принципы:
-- чистый SaaS без шаблонности
-- высокая читаемость
-- минимум визуального шума
-- быстрый доступ к данным
+Principles:
+- clear hierarchy
+- calm colors
+- data first
+- minimal noise
 
-Основа:
-- светлая тема
-- карточки
-- тонкие границы
-- акцентные состояния
-
-Будущее:
-- dark mode
-- анимации
-- графики Recharts
+Main dashboard:
+- KPI cards
+- analytics
+- plugins
+- subscription

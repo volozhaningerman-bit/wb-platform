@@ -1,7 +1,13 @@
 export function ProductMatrix(){
  return (
-  <section>
-   <h2>product-matrix</h2>
+  <section className="card">
+   <h2>Эффективность товаров</h2>
+   <p>
+    Оборот × прибыльность
+   </p>
+   <div>
+    Товары
+   </div>
   </section>
  );
 }
