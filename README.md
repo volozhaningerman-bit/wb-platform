@@ -1,12 +1,20 @@
-# WB Platform Desktop Dashboard Layer
+# WB Platform Dashboard Production Layer
 
-Complete product layer:
-- desktop application shell
-- dashboard domain
-- analytics widgets
-- WB status area
-- plugin overview
-- subscription widget
-- shared UI primitives
+Large functional layer.
 
-This layer is designed to replace scattered UI fragments with one connected product layer.
+Purpose:
+Replace small UI fragments with a connected desktop product layer.
+
+Included:
+- dashboard application shell
+- seller metrics system
+- analytics domain
+- category revenue tree
+- product performance analysis
+- WB connection module
+- plugin ecosystem module
+- subscription module
+- support module
+- shared types and mock data
+
+Desktop only.
