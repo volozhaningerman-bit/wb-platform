@@ -1,12 +1,12 @@
 :root{
- --bg:#f3f5f8;
- --card:#ffffff;
- --border:#e6e8ec;
- --text:#101828;
+ --bg:#f5f7fa;
+ --surface:#ffffff;
+ --border:#e5e7eb;
+ --text:#111827;
  --muted:#667085;
- --green:#12b76a;
  --blue:#2563eb;
- --orange:#f79009;
+ --green:#12b76a;
+ --yellow:#f79009;
 }
 
 *{
@@ -21,35 +21,27 @@ body{
 }
 
 .card{
- background:var(--card);
+ background:var(--surface);
  border:1px solid var(--border);
- border-radius:18px;
- padding:22px;
-}
-
-.layout{
- display:flex;
- min-height:100vh;
-}
-
-.sidebar{
- width:260px;
+ border-radius:20px;
  padding:24px;
- border-right:1px solid var(--border);
- background:white;
 }
 
-.content{
- flex:1;
- padding:30px;
-}
-
-.metrics{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:16px;
+.title{
+ font-size:28px;
+ font-weight:700;
 }
 
 .muted{
  color:var(--muted);
+}
+
+.row{
+ display:flex;
+ gap:16px;
+}
+
+.grid{
+ display:grid;
+ gap:16px;
 }

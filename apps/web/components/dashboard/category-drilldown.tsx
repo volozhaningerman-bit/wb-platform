@@ -1,8 +1,19 @@
 export function CategoryDrilldown(){
  return (
   <section className="card">
-   <h3>category drilldown</h3>
-   <p>WB Platform component</p>
-  </section>
+   <h2>Категории</h2>
+
+   <p>
+    Электроника
+   </p>
+
+   <p>
+    └ Аксессуары
+   </p>
+
+   <p>
+    └ Чехлы
+   </p>
+ </section>
  )
 }

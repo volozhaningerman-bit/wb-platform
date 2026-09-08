@@ -1,23 +1,24 @@
 export default function Plugins(){
 
+const plugins=[
+["Контроль рекламы","ACTIVE"],
+["Мониторинг цен","AVAILABLE"],
+["Анализ конкурентов","AVAILABLE"]
+];
+
 return (
-<main className="content">
-<section className="card">
-<h1>Плагины</h1>
+<main style={{padding:32}}>
+<h1 className="title">
+Плагины
+</h1>
 
-<div>
-🟢 Контроль рекламы
-</div>
-
-<div>
-🟡 Анализ конкурентов
-</div>
-
-<div>
-⚪ Мониторинг цен
-</div>
-
+{plugins.map(p=>(
+<section className="card" key={p[0]}>
+<h2>{p[0]}</h2>
+<p>{p[1]}</p>
 </section>
+))}
+
 </main>
 )
 }

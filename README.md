@@ -1,11 +1,14 @@
-# WB Platform Desktop UI v2
+# WB Platform Desktop UI v3
 
-Visual refinement stage.
+Visual refinement before backend connection.
 
-Focus:
-- improve desktop dashboard
-- real-looking analytics blocks
-- seller workflow screens
-- product feeling instead of wireframe
+Added:
+- production-like dashboard structure
+- analytics page
+- filters foundation
+- chart components
+- plugin marketplace view
+- WB connection experience
+- reusable UI system
 
-No mobile version.
+Desktop only.

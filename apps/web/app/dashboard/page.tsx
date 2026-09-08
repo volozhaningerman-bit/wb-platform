@@ -1,33 +1,38 @@
-import {MetricCard} from "@/components/dashboard/metric-card";
-import {RevenueDonut} from "@/components/dashboard/revenue-donut";
-import {ProfitMatrix} from "@/components/dashboard/profit-matrix";
-import {ProductTable} from "@/components/dashboard/product-table";
+import {PeriodFilter} from "@/components/dashboard/period-filter";
+import {SalesChart} from "@/components/dashboard/sales-chart";
+import {CategoryDrilldown} from "@/components/dashboard/category-drilldown";
+import {StatusWidget} from "@/components/dashboard/status-widget";
 
 export default function Dashboard(){
 
 return (
-<main className="content">
+<main style={{padding:32}}>
 
-<h1>Главная</h1>
+<h1 className="title">
+Главная
+</h1>
 
-<div className="metrics">
-<MetricCard title="Оборот" value="1 240 000 ₽" change="+12%"/>
-<MetricCard title="Прибыль" value="320 000 ₽" change="+8%"/>
-<MetricCard title="Заказы" value="842" change="+24%"/>
-<MetricCard title="Реклама" value="95 000 ₽" change="-4%"/>
+<PeriodFilter/>
+
+<div className="grid">
+
+<section className="card">
+<h2>Оборот</h2>
+<h1>1 240 000 ₽</h1>
+</section>
+
+<section className="card">
+<h2>Прибыль</h2>
+<h1>320 000 ₽</h1>
+</section>
+
 </div>
 
-<div style={{marginTop:20}}>
-<RevenueDonut/>
-</div>
+<SalesChart/>
 
-<div style={{marginTop:20}}>
-<ProfitMatrix/>
-</div>
+<CategoryDrilldown/>
 
-<div style={{marginTop:20}}>
-<ProductTable/>
-</div>
+<StatusWidget/>
 
 </main>
 )
