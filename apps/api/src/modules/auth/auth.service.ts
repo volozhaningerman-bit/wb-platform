@@ -1,20 +1,22 @@
 export class AuthService {
 
-  async createUser(data:any){
-    return {
-      id:'generated-user-id',
-      email:data.email
-    };
-  }
+ async register(data:any){
+  const user = {
+   id:crypto.randomUUID(),
+   email:data.email,
+   name:data.name
+  };
 
-  async createTokens(userId:string){
-    return {
-      accessToken:`access-${userId}`,
-      refreshToken:`refresh-${userId}`
-    };
-  }
+  return {
+   user,
+   nextStep:'create-workspace'
+  };
+ }
 
-  async verifyToken(){
-    return true;
-  }
+ async login(){
+  return {
+   accessToken:'access-token',
+   refreshToken:'refresh-token'
+  };
+ }
 }

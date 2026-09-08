@@ -1,8 +1,18 @@
 export class SubscriptionService {
- async execute(){
+
+ current(){
   return {
-   module:"subscription",
-   timestamp:new Date()
-  }
+   plan:'FREE',
+   features:[
+    'basic analytics'
+   ]
+  };
+ }
+
+ upgrade(){
+  return {
+   plan:'FULL',
+   paymentRequired:true
+  };
  }
 }

@@ -1,10 +1,17 @@
 export class WorkspaceService {
 
- create(userId:string,name:string){
+ create(ownerId:string,name:string){
   return {
-   owner:userId,
+   id:crypto.randomUUID(),
+   ownerId,
    name,
-   created:true
+   onboarding:'wb-connection'
+  };
+ }
+
+ settings(){
+  return {
+   timezone:'Europe/Moscow'
   };
  }
 }

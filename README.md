@@ -1,11 +1,12 @@
-# WB Platform v6 Real Product Build
+# WB Platform v7 First Working SaaS
 
-Production transition stage.
+Goal:
+Move from architecture to first usable SaaS flow.
 
-Added:
-- database models foundation
-- authentication flow
+Included:
+- real user flow structure
 - workspace lifecycle
-- WB integration layer
-- analytics contracts
-- first real UI flows
+- WB connection workflow
+- dashboard contracts
+- subscription foundation
+- production UI structure

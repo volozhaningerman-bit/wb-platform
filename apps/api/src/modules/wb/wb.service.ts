@@ -1,8 +1,16 @@
 export class WbService {
- async execute(){
+
+ connect(token:string){
   return {
-   module:"wb",
-   timestamp:new Date()
-  }
+   connected:Boolean(token),
+   sync:'waiting'
+  };
+ }
+
+ sync(accountId:string){
+  return {
+   accountId,
+   status:'queued'
+  };
  }
 }
