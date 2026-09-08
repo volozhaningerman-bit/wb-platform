@@ -1,13 +1,15 @@
 :root{
- --bg:#f5f7fb;
- --surface:#fff;
- --border:#e5e7eb;
- --text:#111827;
- --muted:#6b7280;
- --blue:#2563eb;
+ --bg:#f4f6f8;
+ --panel:#ffffff;
+ --border:#e4e7eb;
+ --text:#101828;
+ --muted:#667085;
+ --accent:#2563eb;
 }
 
-*{box-sizing:border-box}
+*{
+ box-sizing:border-box;
+}
 
 body{
  margin:0;
@@ -16,27 +18,36 @@ body{
  font-family:Inter,Arial,sans-serif;
 }
 
-a{
- color:inherit;
- text-decoration:none;
+.page{
+ display:flex;
+ min-height:100vh;
+}
+
+.sidebar{
+ width:260px;
+ background:#fff;
+ border-right:1px solid var(--border);
+ padding:24px;
+}
+
+.content{
+ flex:1;
+ padding:32px;
 }
 
 .card{
- background:var(--surface);
+ background:#fff;
  border:1px solid var(--border);
- border-radius:18px;
- padding:20px;
+ border-radius:16px;
+ padding:22px;
 }
 
 .grid{
  display:grid;
+ grid-template-columns:repeat(4,1fr);
  gap:18px;
 }
 
-button{
- border:0;
- border-radius:12px;
- padding:12px 18px;
- background:var(--blue);
- color:white;
+.muted{
+ color:var(--muted);
 }

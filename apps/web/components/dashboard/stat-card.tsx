@@ -1,14 +1,14 @@
 export function StatCard({
  title,
  value
-}: {
- title:string
- value:string
-}) {
+}:{
+ title:string;
+ value:string;
+}){
  return (
-  <div>
-    <span>{title}</span>
-    <strong>{value}</strong>
+  <div className="card">
+   <div className="muted">{title}</div>
+   <h2>{value}</h2>
   </div>
- )
+ );
 }

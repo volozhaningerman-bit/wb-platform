@@ -1,19 +1,22 @@
-const menu=[
- ["Главная","/dashboard"],
- ["Аналитика","/analytics"],
- ["WB кабинеты","/wb"],
- ["Плагины","/plugins"],
- ["Подписка","/subscription"],
- ["Поддержка","/support"]
+const items=[
+"Главная",
+"Аналитика",
+"WB кабинеты",
+"Плагины",
+"Подписка",
+"Поддержка"
 ];
 
 export function Sidebar(){
  return (
-  <aside className="card">
+  <aside className="sidebar">
    <h2>WB Platform</h2>
-   {menu.map(([name,url])=>(
-    <div key={url}>
-     <a href={url}>{name}</a>
+
+   {items.map(item=>(
+    <div key={item} style={{
+     padding:"12px 0"
+    }}>
+     {item}
     </div>
    ))}
   </aside>

@@ -1,16 +1,16 @@
-# WB Platform v8 Site Preview Patch
+# WB Platform Desktop UI v1
+
+First real desktop interface preview.
 
 Goal:
-Get first visual preview running.
+Create a visual product that can be opened and evaluated.
 
-This patch focuses on:
-- real Next.js dashboard UI
-- complete navigation
-- seller onboarding
-- analytics screens
+Included:
+- dashboard
+- analytics screen
+- WB connection screen
 - plugins screen
 - subscription screen
-- support screen
-- reusable components
+- reusable desktop layout
 
-Backend contracts are prepared for future Railway API connection.
+No mobile version yet.

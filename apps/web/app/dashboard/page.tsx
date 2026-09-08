@@ -1,35 +1,39 @@
 import {Sidebar} from "@/components/layout/sidebar";
-import {Header} from "@/components/layout/header";
-import {KPI} from "@/components/dashboard/kpi";
-import {CategoryChart} from "@/components/dashboard/category-chart";
-import {ProfitChart} from "@/components/dashboard/profit-chart";
+import {Topbar} from "@/components/layout/topbar";
+import {StatCard} from "@/components/dashboard/stat-card";
+import {RevenueChart} from "@/components/dashboard/revenue-chart";
+import {ProductTable} from "@/components/dashboard/product-table";
 
 export default function Dashboard(){
- return (
-  <main style={{padding:20}}>
-   <Header/>
-   <div style={{
-    display:"grid",
-    gridTemplateColumns:"240px 1fr",
-    gap:20,
-    marginTop:20
-   }}>
-    <Sidebar/>
 
-    <section>
-     <h1>Главная</h1>
+return (
+<div className="page">
 
-     <div className="grid">
-      <KPI title="Оборот" value="0 ₽"/>
-      <KPI title="Прибыль" value="0 ₽"/>
-      <KPI title="Заказы" value="0"/>
-      <KPI title="Реклама" value="0 ₽"/>
-     </div>
+<Sidebar/>
 
-     <CategoryChart/>
-     <ProfitChart/>
-    </section>
-   </div>
-  </main>
- );
+<section className="content">
+
+<Topbar/>
+
+<h1>Главная</h1>
+
+<div className="grid">
+<StatCard title="Оборот" value="1 240 000 ₽"/>
+<StatCard title="Прибыль" value="320 000 ₽"/>
+<StatCard title="Заказы" value="842"/>
+<StatCard title="Реклама" value="95 000 ₽"/>
+</div>
+
+<div style={{marginTop:24}}>
+<RevenueChart/>
+</div>
+
+<div style={{marginTop:24}}>
+<ProductTable/>
+</div>
+
+</section>
+
+</div>
+)
 }
