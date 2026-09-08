@@ -1,12 +1,24 @@
-import {KpiGrid} from "@/components/dashboard/kpi-grid";
-import {CategoryChart} from "@/components/dashboard/category-chart";
-import {ProductTable} from "@/components/dashboard/product-table";
+import {DashboardLayer} from "@/components/dashboard/dashboard-layer";
+import {CategoryRevenueLayer} from "@/components/analytics/category-revenue-layer";
+import {ProductProfitLayer} from "@/components/analytics/product-profit-layer";
+import {PluginLayer} from "@/components/modules/plugin-layer";
+import {WbAccountLayer} from "@/components/modules/wb-account-layer";
 
 export default function Dashboard(){
- return <>
-  <h1>WB Platform</h1>
-  <KpiGrid/>
-  <CategoryChart/>
-  <ProductTable/>
- </>
+
+ return (
+  <main>
+
+   <DashboardLayer/>
+
+   <CategoryRevenueLayer/>
+
+   <ProductProfitLayer/>
+
+   <WbAccountLayer/>
+
+   <PluginLayer/>
+
+  </main>
+ );
 }

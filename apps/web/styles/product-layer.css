@@ -1,0 +1,33 @@
+.product-shell{
+ min-height:100vh;
+}
+
+.sidebar{
+ width:260px;
+}
+
+.metric-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:20px;
+}
+
+.metric-card,
+.analytics-card,
+.module-card{
+ background:white;
+ border:1px solid #e5e7eb;
+ border-radius:20px;
+ padding:24px;
+ margin-bottom:20px;
+}
+
+.metric-card strong{
+ display:block;
+ font-size:28px;
+}
+
+.donut{
+ font-size:90px;
+ text-align:center;
+}

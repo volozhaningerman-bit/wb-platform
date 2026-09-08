@@ -1,4 +1,12 @@
-# WB Platform Production UI v1
+# WB Platform Desktop Dashboard Layer
 
-Desktop-first UI foundation.
-Includes dashboard, analytics, WB connection and plugins modules.
+Complete product layer:
+- desktop application shell
+- dashboard domain
+- analytics widgets
+- WB status area
+- plugin overview
+- subscription widget
+- shared UI primitives
+
+This layer is designed to replace scattered UI fragments with one connected product layer.
