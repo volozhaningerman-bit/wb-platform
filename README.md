@@ -1,14 +1,11 @@
-# WB Platform v4 Full Product Interface
+# WB Platform v6 Real Product Build
 
-Large combined UI + product layer.
+Production transition stage.
 
-Included:
-- dashboard interface
-- responsive layout foundation
-- analytics widgets
-- plugin management UI
-- WB connection UI
-- subscription UI
-- support UI
-- profile UI
-- admin UI foundation
+Added:
+- database models foundation
+- authentication flow
+- workspace lifecycle
+- WB integration layer
+- analytics contracts
+- first real UI flows
