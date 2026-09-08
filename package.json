@@ -1,12 +1,12 @@
 {
   "name": "wb-platform",
   "private": true,
+  "version": "0.1.0",
   "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "pnpm --filter wb-platform-web dev",
     "build": "pnpm --filter wb-platform-web build",
     "start": "pnpm --filter wb-platform-web start",
-    "test": "pnpm --filter wb-platform-web test",
     "typecheck": "pnpm --filter wb-platform-web typecheck"
   },
   "engines": {
