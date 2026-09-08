@@ -1,8 +1,11 @@
 export class AnalyticsService {
+
  async execute(){
   return {
    module:"analytics",
-   timestamp:new Date()
-  }
+   description:"sales profit categories products",
+   status:"foundation"
+  };
  }
+
 }

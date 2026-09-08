@@ -1,15 +1,18 @@
-export async function apiClient(
- endpoint:string,
- options:RequestInit={}
-){
- return fetch(
-  `${process.env.NEXT_PUBLIC_API_URL}${endpoint}`,
-  {
-   ...options,
-   headers:{
-    'Content-Type':'application/json',
-    ...options.headers
-   }
-  }
- );
+export class ApiClient {
+ async get(path:string){
+  return {
+   path,
+   status:"mock"
+  };
+ }
+
+ async post(path:string,data:any){
+  return {
+   path,
+   data,
+   status:"mock"
+  };
+ }
 }
+
+export const api = new ApiClient();

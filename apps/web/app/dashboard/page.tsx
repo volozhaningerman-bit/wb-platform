@@ -1,31 +1,19 @@
-import {DashboardLayer} from "@/components/dashboard/dashboard-layer";
-import {RevenueTreeLayer} from "@/components/analytics/revenue-tree-layer";
-import {ProductPerformanceLayer} from "@/components/analytics/product-performance-layer";
-import {WbLayer} from "@/components/modules/wb-layer";
-import {PluginsLayer} from "@/components/modules/plugins-layer";
-import {SubscriptionLayer} from "@/components/modules/subscription-layer";
-import {SupportLayer} from "@/components/modules/support-layer";
+import {DashboardModule} from "@/components/dashboard/dashboard-module";
+import {AnalyticsModule} from "@/components/analytics/analytics-module";
+import {WbModule} from "@/components/wb/wb-module";
+import {PluginModule} from "@/components/plugins/plugin-module";
+import {SubscriptionModule} from "@/components/subscription/subscription-module";
 
 export default function Dashboard(){
 
 return (
-<main>
-
-<DashboardLayer/>
-
-<RevenueTreeLayer/>
-
-<ProductPerformanceLayer/>
-
-<WbLayer/>
-
-<PluginsLayer/>
-
-<SubscriptionLayer/>
-
-<SupportLayer/>
-
-</main>
+<>
+<DashboardModule/>
+<AnalyticsModule/>
+<WbModule/>
+<PluginModule/>
+<SubscriptionModule/>
+</>
 )
 
 }

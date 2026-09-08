@@ -1,17 +1,11 @@
 export class WorkspaceService {
 
- create(ownerId:string,name:string){
+ async execute(){
   return {
-   id:crypto.randomUUID(),
-   ownerId,
-   name,
-   onboarding:'wb-connection'
+   module:"workspace",
+   description:"company workspace lifecycle",
+   status:"foundation"
   };
  }
 
- settings(){
-  return {
-   timezone:'Europe/Moscow'
-  };
- }
 }

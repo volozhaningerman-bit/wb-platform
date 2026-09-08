@@ -2,7 +2,7 @@ model User {
  id String @id
  email String @unique
  passwordHash String
- name String?
+ role String
 }
 
 model Workspace {
@@ -15,11 +15,22 @@ model WbAccount {
  id String @id
  name String
  token String
- workspaceId String
+ connected Boolean
+}
+
+model Plugin {
+ id String @id
+ name String
 }
 
 model Subscription {
  id String @id
  plan String
- workspaceId String
+ active Boolean
+}
+
+model SupportTicket {
+ id String @id
+ title String
+ status String
 }

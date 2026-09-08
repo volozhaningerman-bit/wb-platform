@@ -1,16 +1,11 @@
 export class WbService {
 
- connect(token:string){
+ async execute(){
   return {
-   connected:Boolean(token),
-   sync:'waiting'
+   module:"wb",
+   description:"token connection synchronization",
+   status:"foundation"
   };
  }
 
- sync(accountId:string){
-  return {
-   accountId,
-   status:'queued'
-  };
- }
 }

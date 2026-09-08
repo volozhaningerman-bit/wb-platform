@@ -1,8 +1,11 @@
 export class SupportService {
+
  async execute(){
   return {
    module:"support",
-   timestamp:new Date()
-  }
+   description:"tickets messages status",
+   status:"foundation"
+  };
  }
+
 }

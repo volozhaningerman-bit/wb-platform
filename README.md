@@ -1,20 +1,18 @@
-# WB Platform Dashboard Production Layer
+# WB Platform Mega Sprint 1 — MVP Foundation
 
-Large functional layer.
+Large multi-layer patch.
 
-Purpose:
-Replace small UI fragments with a connected desktop product layer.
+Included product layers:
+1. Application core
+2. Design system
+3. Authentication foundation
+4. Workspace model
+5. WB integration foundation
+6. Analytics domain
+7. Plugin system
+8. Subscription system
+9. Support system
+10. Admin foundation
 
-Included:
-- dashboard application shell
-- seller metrics system
-- analytics domain
-- category revenue tree
-- product performance analysis
-- WB connection module
-- plugin ecosystem module
-- subscription module
-- support module
-- shared types and mock data
-
-Desktop only.
+Goal:
+Create a real SaaS foundation instead of isolated UI fragments.

@@ -1,22 +1,11 @@
 export class AuthService {
 
- async register(data:any){
-  const user = {
-   id:crypto.randomUUID(),
-   email:data.email,
-   name:data.name
-  };
-
+ async execute(){
   return {
-   user,
-   nextStep:'create-workspace'
+   module:"auth",
+   description:"register login sessions password hashing",
+   status:"foundation"
   };
  }
 
- async login(){
-  return {
-   accessToken:'access-token',
-   refreshToken:'refresh-token'
-  };
- }
 }

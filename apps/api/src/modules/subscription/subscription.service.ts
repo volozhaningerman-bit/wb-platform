@@ -1,18 +1,11 @@
 export class SubscriptionService {
 
- current(){
+ async execute(){
   return {
-   plan:'FREE',
-   features:[
-    'basic analytics'
-   ]
+   module:"subscription",
+   description:"free full plans limits",
+   status:"foundation"
   };
  }
 
- upgrade(){
-  return {
-   plan:'FULL',
-   paymentRequired:true
-  };
- }
 }
