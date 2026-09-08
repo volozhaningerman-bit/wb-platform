@@ -1,12 +1,23 @@
-export default function Page(){
- return (
-  <main className="content">
-   <div className="card">
-    <h1>Плагины</h1>
-    <p className="muted">
-     Desktop preview section
-    </p>
-   </div>
-  </main>
- )
+export default function Plugins(){
+
+return (
+<main className="content">
+<section className="card">
+<h1>Плагины</h1>
+
+<div>
+🟢 Контроль рекламы
+</div>
+
+<div>
+🟡 Анализ конкурентов
+</div>
+
+<div>
+⚪ Мониторинг цен
+</div>
+
+</section>
+</main>
+)
 }

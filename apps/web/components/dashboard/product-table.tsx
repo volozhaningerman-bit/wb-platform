@@ -1,24 +1,22 @@
-const products=[
- ["Товар 1","500 000 ₽","120 000 ₽"],
- ["Товар 2","300 000 ₽","70 000 ₽"],
- ["Товар 3","100 000 ₽","25 000 ₽"]
+const rows=[
+ ["Кроссовки","850 000 ₽","230 000 ₽","28%"],
+ ["Чехлы","430 000 ₽","80 000 ₽","19%"],
+ ["Игрушки","210 000 ₽","65 000 ₽","31%"]
 ];
 
 export function ProductTable(){
  return (
   <section className="card">
-   <h2>Топ товаров</h2>
+   <h2>Лучшие товары</h2>
 
-   {products.map(row=>(
-    <div key={row[0]} style={{
+   {rows.map(r=>(
+    <div key={r[0]} style={{
      display:"grid",
-     gridTemplateColumns:"2fr 1fr 1fr",
-     padding:"12px 0",
+     gridTemplateColumns:"2fr 1fr 1fr 1fr",
+     padding:"14px 0",
      borderBottom:"1px solid #eee"
     }}>
-     <span>{row[0]}</span>
-     <span>{row[1]}</span>
-     <span>{row[2]}</span>
+     {r.map(x=><span key={x}>{x}</span>)}
     </div>
    ))}
   </section>

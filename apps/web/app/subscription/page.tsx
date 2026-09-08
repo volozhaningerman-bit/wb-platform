@@ -1,12 +1,21 @@
-export default function Page(){
- return (
-  <main className="content">
-   <div className="card">
-    <h1>Подписка</h1>
-    <p className="muted">
-     Desktop preview section
-    </p>
-   </div>
-  </main>
- )
+export default function Subscription(){
+
+return (
+<main className="content">
+<section className="card">
+<h1>Тариф</h1>
+
+<h2>FREE</h2>
+
+<p>
+Базовые возможности
+</p>
+
+<button>
+Перейти на FULL
+</button>
+
+</section>
+</main>
+)
 }

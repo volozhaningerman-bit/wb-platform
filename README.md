@@ -1,16 +1,11 @@
-# WB Platform Desktop UI v1
+# WB Platform Desktop UI v2
 
-First real desktop interface preview.
+Visual refinement stage.
 
-Goal:
-Create a visual product that can be opened and evaluated.
+Focus:
+- improve desktop dashboard
+- real-looking analytics blocks
+- seller workflow screens
+- product feeling instead of wireframe
 
-Included:
-- dashboard
-- analytics screen
-- WB connection screen
-- plugins screen
-- subscription screen
-- reusable desktop layout
-
-No mobile version yet.
+No mobile version.
