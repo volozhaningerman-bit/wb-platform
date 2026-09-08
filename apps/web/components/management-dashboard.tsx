@@ -191,6 +191,15 @@ function Distribution({
               : "групп"}
         </span>
       </div>
+      <nav className="chart-navigation" aria-label={mode === "category" ? "Навигация по категориям" : "Навигация по менеджерам"}>
+        <button type="button" disabled={path.length === 0} onClick={() => {setPath(path.slice(0, -1));setAll(false);}}>
+          <ChevronLeft size={17} /> Назад
+        </button>
+        <button type="button" disabled={path.length === 0} onClick={() => {setPath([]);setAll(false);}}>
+          {mode === "category" ? "Все категории" : "Все менеджеры"}
+        </button>
+        <span aria-live="polite">{path.length === 0 ? "Общий обзор" : key === "productId" ? "Товары · нажмите для подробностей" : "Выберите группу"}</span>
+      </nav>
       <div className="breadcrumbs">
         <button
           onClick={() => {
@@ -289,18 +298,7 @@ function Distribution({
                 ? "Доля рассчитана внутри выбранной группы"
                 : "Выберите сегмент, чтобы посмотреть подробнее"}
             </span>
-            {path.length > 0 ? (
-              <button
-                onClick={() => {
-                  setPath(path.slice(0, -1));
-                  setAll(false);
-                }}
-              >
-                <ChevronLeft size={14} /> Назад
-              </button>
-            ) : (
-              <Delta current={total} previous={summarize(oldScoped).revenue} />
-            )}
+            <Delta current={total} previous={summarize(oldScoped).revenue} />
           </div>
           {path.length > 0 && (
             <div className="drill-table">
@@ -1039,6 +1037,12 @@ export default function ManagementDashboard({
       </div>
       {selectedProduct && product && (
         <Modal title={product.label} onClose={() => setSelectedProduct(null)}>
+          <div className="product-return">
+            <button type="button" className="button secondary" onClick={() => setSelectedProduct(null)}>
+              <ChevronLeft size={17} /> Вернуться к просмотру
+            </button>
+            <span>Выбранный уровень и фильтры сохранятся</span>
+          </div>
           <p className="modal-subtitle">
             Артикул {product.key} · {product.rows[0].category} /{" "}
             {product.rows[0].subcategory}

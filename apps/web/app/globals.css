@@ -1161,3 +1161,15 @@ tbody tr:hover {
     transition: none !important;
   }
 }
+
+/* Visible drilldown navigation, including empty selections and the product level. */
+.chart-navigation { display:flex; align-items:center; flex-wrap:wrap; gap:8px; padding:16px 22px 0; }
+.chart-navigation button { display:inline-flex; align-items:center; justify-content:center; gap:5px; min-height:36px; padding:8px 12px; border:1px solid #d8d1eb; border-radius:6px; background:#f5f2fc; color:#6753ac; font-size:12px; font-weight:500; }
+.chart-navigation button:hover:not(:disabled) { background:#eae3f8; border-color:#bcaedb; }
+.chart-navigation button:disabled { background:#fafafa; border-color:#e8e9ed; color:#9296a1; cursor:default; }
+.chart-navigation > span { margin-left:auto; font-size:11px; color:#777d8c; }
+.distribution .breadcrumbs { padding-top:12px; padding-bottom:5px; }
+.distribution .breadcrumbs button { font-size:11px; color:#75678e; padding:4px 3px; }
+.product-return { display:flex; align-items:center; flex-wrap:wrap; gap:10px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+.product-return .button { min-height:38px; font-size:12px; color:#6753ac; border-color:#d8d1eb; }
+.product-return > span { font-size:11px; color:#838797; }
