@@ -1,7 +1,8 @@
 export function Header(){
  return (
-  <section className="card">
-   header
-  </section>
- )
+  <header className="card">
+   <strong>WB Platform</strong>
+   <span>FREE · Профиль</span>
+  </header>
+ );
 }

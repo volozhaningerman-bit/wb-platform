@@ -1,7 +1,10 @@
 export default function Page(){
  return (
-  <main>
-   <h1>Subscription</h1>
+  <main style={{padding:40}}>
+   <h1>Подписка</h1>
+   <section className="card">
+    Раздел готовится к подключению данных.
+   </section>
   </main>
- )
+ );
 }

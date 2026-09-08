@@ -1,12 +1,16 @@
-# WB Platform v7 First Working SaaS
+# WB Platform v8 Site Preview Patch
 
 Goal:
-Move from architecture to first usable SaaS flow.
+Get first visual preview running.
 
-Included:
-- real user flow structure
-- workspace lifecycle
-- WB connection workflow
-- dashboard contracts
-- subscription foundation
-- production UI structure
+This patch focuses on:
+- real Next.js dashboard UI
+- complete navigation
+- seller onboarding
+- analytics screens
+- plugins screen
+- subscription screen
+- support screen
+- reusable components
+
+Backend contracts are prepared for future Railway API connection.
