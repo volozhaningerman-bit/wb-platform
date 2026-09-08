@@ -1,24 +1,14 @@
-const items=[
-"Главная",
-"Аналитика",
-"WB кабинеты",
-"Плагины",
-"Подписка",
-"Поддержка"
-];
-
-export function Sidebar(){
- return (
-  <aside className="sidebar">
-   <h2>WB Platform</h2>
-
-   {items.map(item=>(
-    <div key={item} style={{
-     padding:"12px 0"
-    }}>
-     {item}
-    </div>
-   ))}
-  </aside>
- );
+export default function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <div className="logo">WB Platform</div>
+      <nav>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/analytics">Analytics</a>
+        <a href="/wb">Wildberries</a>
+        <a href="/plugins">Plugins</a>
+        <a href="/subscription">Subscription</a>
+      </nav>
+    </aside>
+  );
 }

@@ -1,17 +1,5 @@
-export function MetricCard({
- title,
- value,
- change
-}:{
- title:string;
- value:string;
- change:string;
-}){
- return (
-  <div className="card">
-   <div className="muted">{title}</div>
-   <h2>{value}</h2>
-   <small>{change}</small>
-  </div>
- );
+import Card from "../ui/card";
+
+export default function MetricCard({title,value}:{title:string,value:string}) {
+  return <Card><small>{title}</small><h2>{value}</h2></Card>;
 }

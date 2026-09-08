@@ -1,8 +1,8 @@
-export function Header(){
- return (
-  <header className="card">
-   <strong>WB Platform</strong>
-   <span>FREE · Профиль</span>
-  </header>
- );
+export default function Header() {
+  return (
+    <header className="header">
+      <strong>WB Platform</strong>
+      <div>Seller workspace</div>
+    </header>
+  );
 }

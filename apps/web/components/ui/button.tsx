@@ -1,9 +1,3 @@
-export function Button({children}:{
- children:React.ReactNode
-}){
- return (
-  <button>
-   {children}
-  </button>
- )
+export default function Button({children}:{children:React.ReactNode}) {
+  return <button className="button">{children}</button>;
 }
