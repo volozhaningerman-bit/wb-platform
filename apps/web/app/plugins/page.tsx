@@ -1,6 +1,10 @@
-export default function Plugins(){
- return <>
-  <h1>Плагины</h1>
-  <p>ECCO, реклама, цены, конкуренты</p>
- </>
+export default function Page(){
+ return (
+  <main className="container">
+   <div className="card">
+    <h1>Плагины</h1>
+    <p>Desktop preview</p>
+   </div>
+  </main>
+ );
 }

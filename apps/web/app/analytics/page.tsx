@@ -1,6 +1,10 @@
-export default function Analytics(){
- return <>
-  <h1>Аналитика</h1>
-  <p>Категории, товары, прибыльность, реклама</p>
- </>
+export default function Page(){
+ return (
+  <main className="container">
+   <div className="card">
+    <h1>Аналитика</h1>
+    <p>Desktop preview</p>
+   </div>
+  </main>
+ );
 }

@@ -1,6 +1,10 @@
-export default function WB(){
- return <>
-  <h1>WB кабинеты</h1>
-  <p>Подключение магазина и синхронизация</p>
- </>
+export default function Page(){
+ return (
+  <main className="container">
+   <div className="card">
+    <h1>WB кабинеты</h1>
+    <p>Desktop preview</p>
+   </div>
+  </main>
+ );
 }

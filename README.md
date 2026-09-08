@@ -1,18 +1,18 @@
-# WB Platform Mega Sprint 1 — MVP Foundation
+# WB Platform First Visual Release
 
-Large multi-layer patch.
+Deploy-ready desktop preview layer.
 
-Included product layers:
-1. Application core
-2. Design system
-3. Authentication foundation
-4. Workspace model
-5. WB integration foundation
-6. Analytics domain
-7. Plugin system
-8. Subscription system
-9. Support system
-10. Admin foundation
+Purpose:
+- open the project in browser
+- see the first real cabinet interface
+- continue development from a working visual base
 
-Goal:
-Create a real SaaS foundation instead of isolated UI fragments.
+Included:
+- Next.js app structure
+- login/register screens
+- dashboard
+- analytics
+- WB connection
+- plugins
+- subscription
+- shared UI
