@@ -1,0 +1,13 @@
+{
+  "name": "wb-platform",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "npm --prefix apps/web run dev",
+    "build": "npm --prefix apps/web run build",
+    "start": "npm --prefix apps/web run start"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
