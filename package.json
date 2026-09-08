@@ -1,15 +1,14 @@
 {
   "name": "wb-platform",
   "private": true,
-  "version": "0.1.0",
-  "packageManager": "pnpm@9.0.0",
   "scripts": {
-    "dev": "pnpm --filter wb-platform-web dev",
-    "build": "pnpm --filter wb-platform-web build",
-    "start": "pnpm --filter wb-platform-web start",
-    "typecheck": "pnpm --filter wb-platform-web typecheck"
+    "dev": "npm --prefix apps/web run dev",
+    "build": "npm --prefix apps/web run build",
+    "start": "npm --prefix apps/web run start",
+    "test": "npm --prefix apps/web test",
+    "typecheck": "npm --prefix apps/web run typecheck"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=22.13"
   }
 }
