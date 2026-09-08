@@ -1,9 +1,14 @@
 {
-  "name":"wb-platform",
-  "private":true,
-  "scripts":{
-    "dev":"turbo dev",
-    "build":"turbo build",
-    "lint":"turbo lint"
+  "name": "wb-platform",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix apps/web run dev",
+    "build": "npm --prefix apps/web run build",
+    "start": "npm --prefix apps/web run start",
+    "test": "npm --prefix apps/web test",
+    "typecheck": "npm --prefix apps/web run typecheck"
+  },
+  "engines": {
+    "node": ">=22.13"
   }
 }

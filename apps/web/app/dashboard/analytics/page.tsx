@@ -1,7 +1,4 @@
-export default function Page(){
- return (
-  <main>
-   <h1>Аналитика</h1>
-  </main>
- );
+import ManagementDashboard from "@/components/management-dashboard";
+export default function Analytics() {
+  return <ManagementDashboard initialView="analytics" />;
 }

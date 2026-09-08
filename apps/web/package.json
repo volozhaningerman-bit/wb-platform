@@ -1,20 +1,25 @@
 {
-  "name":"wb-platform-web",
-  "private":true,
-  "scripts":{
-    "dev":"next dev",
-    "build":"next build",
-    "start":"next start"
+  "name": "wb-platform-web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs"
   },
-  "dependencies":{
-    "next":"latest",
-    "react":"latest",
-    "react-dom":"latest",
-    "lucide-react":"latest",
-    "recharts":"latest"
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "lucide-react": "1.42.0",
+    "recharts": "3.10.1"
   },
-  "devDependencies":{
-    "typescript":"latest",
-    "tailwindcss":"latest"
-  }
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/node": "26.5.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7"
+  },
+  "type": "module"
 }
