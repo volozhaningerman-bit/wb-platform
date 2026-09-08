@@ -1,3 +1,16 @@
-# architecture
+# Architecture
 
-WB Platform design documentation.
+User
+ |
+Workspace
+ |
+WB Account
+ |
+Plugins
+
+Future:
+Auth
+Subscriptions
+Billing
+Support
+Admin

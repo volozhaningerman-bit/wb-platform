@@ -1,4 +1,6 @@
-import ManagementDashboard from "@/components/management-dashboard";
-export default function Analytics() {
-  return <ManagementDashboard initialView="analytics" />;
+export default function Analytics(){
+ return <>
+  <h1>Аналитика</h1>
+  <p>Категории, товары, прибыльность, реклама</p>
+ </>
 }
